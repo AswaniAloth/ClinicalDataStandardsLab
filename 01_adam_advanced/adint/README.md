@@ -6,6 +6,8 @@ They simplify complex derivations, centralize reusable logic, and enforce tracea
 This folder contains all intermediate datasets used in Chapter 1 of the Clinical Data Standards Lab.
 
 ---
+Reference to the Example : https://www.cdisc.org/system/files/members/standard/foundational/ADaM%20Oncology%20Examples%20v1.0_Provisional.pdf
+
 
 ## 🎯 Purpose of ADINT Datasets
 
