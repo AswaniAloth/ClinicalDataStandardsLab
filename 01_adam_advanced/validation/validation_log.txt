@@ -1,0 +1,2 @@
+Validation log placeholder.
+CORE and custom rule outputs will be stored here.

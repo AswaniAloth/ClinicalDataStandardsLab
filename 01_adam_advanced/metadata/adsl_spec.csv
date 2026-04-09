@@ -1,0 +1,4 @@
+Variable,Type,Description
+USUBJID,Char,Unique Subject Identifier
+TRT01A,Char,Actual Treatment
+SAFFL,Char,Safety Population Flag

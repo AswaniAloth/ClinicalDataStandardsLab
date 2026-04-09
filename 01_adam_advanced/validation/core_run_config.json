@@ -1,0 +1,5 @@
+{
+  "engine": "CORE",
+  "datasets": ["ADSL", "ADLB", "ADVS"],
+  "ruleset": "adam"
+}
