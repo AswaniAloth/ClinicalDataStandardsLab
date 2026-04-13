@@ -1,0 +1,5 @@
+{
+  "baseline_rule": "Last non-missing value prior to first dose",
+  "analysis_flag_rule": "Record used for primary analysis",
+  "visit_alignment": "Map SDTM visits to analysis visits"
+}

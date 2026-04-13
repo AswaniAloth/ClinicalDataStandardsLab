@@ -1,0 +1,5 @@
+Variable,Type,Length,Description,Derivation
+USUBJID,Char,20,Unique Subject Identifier,From DM
+TRT01P,Char,40,Planned Treatment,From TS/DM
+TRT01A,Char,40,Actual Treatment,From EX
+SAFFL,Char,1,Safety Population Flag,Metadata rule

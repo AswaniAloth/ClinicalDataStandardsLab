@@ -1,0 +1,4 @@
+PARAMCD,PARAM,Unit,Derivation
+SYSBP,Systolic Blood Pressure,mmHg,From VS
+DIABP,Diastolic Blood Pressure,mmHg,From VS
+PULSE,Pulse Rate,bpm,From VS

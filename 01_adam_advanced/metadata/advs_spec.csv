@@ -1,0 +1,4 @@
+Variable,Type,Description
+USUBJID,Char,Subject Identifier
+PARAMCD,Char,Parameter Code
+AVAL,Num,Analysis Value

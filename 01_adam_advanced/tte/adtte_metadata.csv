@@ -1,0 +1,5 @@
+Variable,Description
+PARAMCD,Event Parameter Code
+EVNTFL,Event Flag
+CNSR,Censoring Indicator
+AVAL,Time-to-event value

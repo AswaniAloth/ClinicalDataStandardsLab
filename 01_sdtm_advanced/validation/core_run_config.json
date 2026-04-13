@@ -1,0 +1,5 @@
+{
+  "engine": "CORE",
+  "datasets": ["DM", "VS", "LB", "EX"],
+  "ruleset": "sdtm"
+}
