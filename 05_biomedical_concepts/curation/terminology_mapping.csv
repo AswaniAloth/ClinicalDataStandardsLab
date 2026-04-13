@@ -1,0 +1,5 @@
+BC_Property,SDTM_Variable,Controlled_Terms
+Value,LBORRES,
+Unit,LBORRESU,mg/dL; g/dL; mmol/L
+Specimen,LBSPEC,Blood; Serum; Plasma
+Method,LBMETHOD,Automated; Manual
