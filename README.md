@@ -115,6 +115,69 @@ Automation (Define‑XML, Dataset‑JSON, CORE, ARS)
 Clear traceability from observation to analysis
 Future‑proof CDISC implementations
 
+5.1 Biomedical Concept (BC) Modeling
+
+What a Biomedical Concept Is (Modern Interpretation)
+A Biomedical Concept is a study‑agnostic semantic definition of a clinical observation or intervention.
+It captures meaning, not structure.
+A BC answers questions such as:
+
+What is being measured or observed?
+Principle (modern CDISC view)
+A Biomedical Concept is realized in one or more SDTM domains depending on the type of clinical observation or intervention it represents.
+The SDTM domain is a structural container, not the source of meaning.
+Examples
+Laboratory Measurement
+→ realized in SDTM LB (Findings class)
+Vital Signs Measurement
+→ realized in SDTM VS (Findings class)
+Adverse Event Occurrence
+→ realized in SDTM AE (Events class)
+Exposure Administration
+→ realized in SDTM EX (Interventions class)
+✅ The mapping is driven by concept type (Observation / Event / Intervention), not by convenience.
+
+2️⃣ Which SDTM variables represent each concept attribute?
+Principle
+
+Concept attributes are mapped to SDTM variables through Dataset Specializations, not directly in the Biomedical Concept.
+
+Each concept attribute is realized by one or more SDTM variables, depending on structure and standard rules.
+
+Example: Laboratory Measurement → SDTM LB
+Concept attributes → SDTM realization
+Test identifier
+→ LBTESTCD, LBTEST
+Result
+→ LBSTRESN (numeric) or LBSTRESC (character)
+Unit
+→ LBSTRESU
+Collection time
+→ LBDTC
+Specimen / method (if applicable)
+→ LBSPEC, LBMETHOD
+
+Example: Vital Signs Measurement → SDTM VS
+Vital sign identifier
+→ VSTESTCD, VSTEST
+Result
+→ VSSTRESN
+Unit
+→ VSSTRESU
+Measurement time
+→ VSDTC
+
+Example: Adverse Event Occurrence → SDTM AE
+Event term
+→ AETERM
+Start / end time
+→ AESTDTC, AEENDTC
+Severity
+→ AESEV
+
+
+✅ This mapping is explicitly documented in Dataset Specializations and later enforced through SDTM and Define‑XML metadata.
+
 ### **Chapter 6: ARS (Analysis Results Standard)**
 - ARS v1.0 model  
 - ARM support  
