@@ -102,7 +102,18 @@ This repository follows a structured lessons which any SAS/Bioststatiscs expert 
 ### **Chapter 5: Biomedical Concepts & Dataset Specializations**
 - BC modeling  
 - Dataset Specialization creation  
-- Curation principles  
+- Curation principles
+  
+Purpose and Context
+This chapter introduces the semantic foundation of the CDISC standards stack by modeling Biomedical Concepts (BCs) and applying them through Dataset Specializations.
+Rather than starting from SDTM domains or CRF structures, this chapter adopts a meaning‑first, metadata‑driven approach aligned with modern CDISC direction.
+Biomedical Concepts define what a clinical observation or intervention means, independent of how it is collected, stored, or analyzed. Dataset Specializations then formalize how that meaning is consistently realized in SDTM datasets.
+Together, these artifacts establish a stable semantic layer that supports:
+
+Consistent SDTM and ADaM design
+Automation (Define‑XML, Dataset‑JSON, CORE, ARS)
+Clear traceability from observation to analysis
+Future‑proof CDISC implementations
 
 ### **Chapter 6: ARS (Analysis Results Standard)**
 - ARS v1.0 model  
