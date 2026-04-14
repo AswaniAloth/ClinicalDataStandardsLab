@@ -138,6 +138,7 @@ Exposure Administration
 ✅ The mapping is driven by concept type (Observation / Event / Intervention), not by convenience.
 
 2️⃣ Which SDTM variables represent each concept attribute?
+
 Principle
 
 Concept attributes are mapped to SDTM variables through Dataset Specializations, not directly in the Biomedical Concept.
