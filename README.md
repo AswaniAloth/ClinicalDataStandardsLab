@@ -91,18 +91,18 @@ This repository follows a structured lessons which any SAS/Bioststatiscs expert 
 - JSON structure  
 - Conversion workflows  
 - NDJSON  
-- Error diagnosis  
-
-### **Chapter 4: Biomedical Concepts & Dataset Specializations**
-- BC modeling  
-- Dataset Specialization creation  
-- Curation principles  
-
-### **Chapter 5: CORE (CDISC Open Rules Engine)**
+- Error diagnosis
+- 
+### **Chapter 4: CORE (CDISC Open Rules Engine)**
 - Rule writing  
 - Rule execution  
 - SDTM/ADaM validation  
-- Understanding conformance logic  
+- Understanding conformance logic
+- 
+### **Chapter 5: Biomedical Concepts & Dataset Specializations**
+- BC modeling  
+- Dataset Specialization creation  
+- Curation principles  
 
 ### **Chapter 6: ARS (Analysis Results Standard)**
 - ARS v1.0 model  
