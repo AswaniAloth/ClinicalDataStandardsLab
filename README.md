@@ -131,6 +131,41 @@ Alignment with existing ontologies or terminologies when applicable
 
 Well‑defined BC models provide the semantic backbone for dataset specialization and downstream analytics.
 
+ Biomedical Concept (BC) – Concept Schema (Example)
+The following concept-centric schema illustrates how a Biomedical Concept is modeled with identifiers, attributes, and relationships.
+
+BiomedicalConcept:
+  concept_id: string        # Stable unique identifier
+  name: string              # Human-readable concept name
+  type: enum                # e.g., Disease, Procedure, Biomarker
+  definition: string        # Clear semantic definition
+  ontology_reference:
+    system: string          # e.g., SNOMED, LOINC, ICD
+    code: string
+  attributes:
+    - name: string
+      data_type: string
+      unit: string
+  relationships:
+    - type: string          # e.g., "associated_with", "part_of"
+      target_concept_id: string
+      
+      Example instance:
+      concept_id: BC_DISEASE_001
+name: Type 2 Diabetes Mellitus
+type: Disease
+definition: Chronic metabolic disorder characterized by insulin resistance.
+ontology_reference:
+  system: SNOMED_CT
+  code: "44054006"
+attributes:
+  - name: HbA1c
+    data_type: float
+    unit: "%"
+relationships:
+  - type: associated_with
+    target_concept_id: BC_BIOMARKER_003
+
 2. Dataset Specialization Creation
 Dataset specialization is the process of deriving purpose‑specific datasets from broader data sources while preserving semantic clarity and traceability.
 This process includes:
