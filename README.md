@@ -176,6 +176,62 @@ Applying consistent naming, typing, and structural conventions
 Ensuring compatibility with data pipelines, analytics, and ML workflows
 Dataset specializations are designed to balance domain specificity with general reusability, enabling efficient data consumption without sacrificing context or meaning.
 
+DatasetSpecialization:
+  dataset_id: string
+  domain: string                     # e.g., Endocrinology
+  purpose: string                    # e.g., Risk stratification
+  included_concepts:
+    - concept_id: string
+      role: string                   # primary | supporting
+  structure:
+    tables:
+      - name: string
+        primary_key: string
+        fields:
+          - name: string
+            data_type: string
+            concept_reference: string
+            dataset_id: DS_T2DM_RISK_V1
+            
+   Example specialization:         
+domain: Endocrinology
+purpose: Type 2 diabetes risk modeling
+included_concepts:
+  - concept_id: BC_DISEASE_001
+    role: primary
+  - concept_id: BC_BIOMARKER_003
+    role: supporting
+structure:
+  tables:
+    - name: patient_metrics
+      primary_key: patient_id
+      fields:
+        - name: patient_id
+          data_type: string
+        - name: hba1c_value
+          data_type: float
+          concept_reference: BC_BIOMARKER_003
+5.3 Conceptual Relationship Diagram (Mermaid)
+
+<img width="2086" height="2268" alt="Mermaid-preview" src="https://github.com/user-attachments/assets/f93e38cc-2e56-4699-aaab-0aadaaa2b0fa" />
+5.4 Pseudo‑Model (Object-Oriented Representation)
+The following pseudo‑model illustrates how BCs and datasets may be implemented in code or data frameworks.
+Class BiomedicalConcept
+  - concept_id: String
+  - name: String
+  - type: ConceptType
+  - definition: String
+  - ontology_reference: OntologyRef
+  - attributes: List<Attribute>
+  - relationships: List<Relationship>
+
+Class DatasetSpecialization
+  - dataset_id: String
+  - domain: String
+  - purpose: String
+  - included_concepts: List<BiomedicalConcept>
+  - schema: DatasetSchema
+            
 3. Curation Principles
 High‑quality biomedical data requires rigorous curation practices. The following principles guide dataset curation:
 
