@@ -69,40 +69,16 @@ clinical-data-standards-lab/
 Each folder aligns with a major CDISC standard or project milestone.
 
 ---
-
 ## 📅 Roadmap 
 
 This repository follows a structured lessons which any SAS/Bioststatiscs expert can follow:
 
-### **Chapter 1: ADaM Advanced**
-- Intermediate datasets  
-- Complex data flows  
-- BDS criteria variables  
-- Metadata creation  
-- TFL‑driven ADaM design  
+### **Chapter 1: Biomedical Concepts & Dataset Specializations**
 
-### **Chapter 2: SDTM Advanced**
-- Timing variables  
-- EX/EC/biospecimen/lab‑like structures  
-- Manual + automated conformance  
-- SDTM metadata best practices  
-
-### **Chapter 3: Dataset‑JSON v1.1**
-- JSON structure  
-- Conversion workflows  
-- NDJSON  
-- Error diagnosis
-- 
-### **Chapter 4: CORE (CDISC Open Rules Engine)**
-- Rule writing  
-- Rule execution  
-- SDTM/ADaM validation  
-- Understanding conformance logic
-- 
-### **Chapter 5: Biomedical Concepts & Dataset Specializations**
 - BC modeling  
 - Dataset Specialization creation  
 - Curation principles
+  
 Purpose and Context
 This chapter introduces the semantic foundation of the CDISC standards stack by modeling Biomedical Concepts (BCs) and applying them through Dataset Specializations.
 Rather than starting from SDTM domains or CRF structures, this chapter adopts a meaning‑first, metadata‑driven approach aligned with modern CDISC direction.
@@ -263,11 +239,64 @@ AI and machine learning model development
 Knowledge graph construction and semantic integration
 Regulatory, clinical, and translational data analysis
 
+### **Chapter 2:  SDTM (Study Data Tabulation Model)
+
+├── mapping/      # Concept-to-SDTM mappings
+├── domains/      # SDTM domain definitions and examples
+├── timing/       # Timing variables and temporal alignment
+└── validation/   # SDTM validation rules and checks
+
+This chapter covers the implementation of SDTM (Study Data Tabulation Model) as a standardized representation of clinical trial data.
+It focuses on how biomedical concepts are mapped, structured into domains, temporally aligned, and validated for regulatory submission and downstream use.
+
+Purpose of This Chapter
+The objectives of the 01_sdtm layer are to:
+
+Translate biomedical concepts into SDTM‑compliant structures
+Ensure consistent domain modeling across studies
+Handle time‑related clinical data in a controlled and reproducible manner
+Apply validation rules to ensure regulatory readiness
+
+This chapter acts as the first concrete standardization step after semantic modeling.
+
+
 ### **Chapter 6: ARS (Analysis Results Standard)**
 - ARS v1.0 model  
 - ARM support  
 - FDA Standard Safety Tables  
 - Metadata‑driven automation  
+
+
+### **Chapter 2: — SDTM (Study Data Tabulation Model)
+
+This chapter covers the implementation of SDTM (Study Data Tabulation Model) as a standardized representation of clinical trial data.
+It focuses on how biomedical concepts are mapped, structured into domains, temporally aligned, and validated for regulatory submission and downstream use.
+
+### **Chapter 1: ADaM Advanced**
+- Intermediate datasets  
+- Complex data flows  
+- BDS criteria variables  
+- Metadata creation  
+- TFL‑driven ADaM design  
+
+### **Chapter 2: SDTM Advanced**
+- Timing variables  
+- EX/EC/biospecimen/lab‑like structures  
+- Manual + automated conformance  
+- SDTM metadata best practices  
+
+### **Chapter 3: Dataset‑JSON v1.1**
+- JSON structure  
+- Conversion workflows  
+- NDJSON  
+- Error diagnosis
+- 
+### **Chapter 4: CORE (CDISC Open Rules Engine)**
+- Rule writing  
+- Rule execution  
+- SDTM/ADaM validation  
+- Understanding conformance logic
+- 
 
 ### **Chapter 7: Integration Project**
 Build a mini‑submission package:
