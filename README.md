@@ -18,7 +18,6 @@ The goal of **Clinical Data Standards Lab** is to:
 This is a **learning lab**, not a production environment — experimentation is encouraged.
 
 ---
-sdfdasadsf
 ## 🗂️ Repository Structure
 
 `````
