@@ -1,0 +1,13 @@
+{
+  "specializationId": "DS.Hemoglobin.LB",
+  "bcReference": "BC.Hemoglobin",
+  "domain": "LB",
+  "variableBindings": {
+    "LBTESTCD": "HGB",
+    "LBTEST": "Hemoglobin",
+    "LBORRES": "Value",
+    "LBORRESU": "Unit",
+    "LBSPEC": "Specimen",
+    "LBMETHOD": "Method"
+  }
+}

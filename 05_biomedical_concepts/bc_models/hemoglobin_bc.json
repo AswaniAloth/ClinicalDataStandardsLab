@@ -1,0 +1,14 @@
+{
+  "conceptId": "BC.Hemoglobin",
+  "name": "Hemoglobin",
+  "properties": [
+    {"name": "Value", "datatype": "float"},
+    {"name": "Unit", "datatype": "string"},
+    {"name": "Specimen", "datatype": "string"},
+    {"name": "Method", "datatype": "string"}
+  ],
+  "terminology": {
+    "LBTESTCD": "HGB",
+    "LBTEST": "Hemoglobin"
+  }
+}
