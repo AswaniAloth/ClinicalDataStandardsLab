@@ -256,9 +256,34 @@ Translate biomedical concepts into SDTM‑compliant structures
 Ensure consistent domain modeling across studies
 Handle time‑related clinical data in a controlled and reproducible manner
 Apply validation rules to ensure regulatory readiness
-
 This chapter acts as the first concrete standardization step after semantic modeling.
 
+ SDTM Directory Structure Overview
+The SDTM implementation is organized into four functional areas, each represented by a dedicated subdirectory:
+
+mapping/
+Contains specifications and documentation defining how biomedical concepts and source data are mapped to SDTM variables and domains.
+
+domains/
+Contains the SDTM domain datasets and associated definitions, representing the standardized output of the SDTM transformation process.
+
+timing/
+Houses shared timing logic, derivation rules, and documentation for temporal alignment across domains.
+
+validation/
+Includes validation outputs, rule checks, issue logs, and resolution documentation supporting regulatory submission.
+This separation of concerns improves traceability, maintainability, and audit readiness.
+
+Role of SDTM in the Overall Data Flow
+
+Within the broader clinical data architecture, SDTM represents:
+
+The first regulatory‑facing standard layer
+The primary input for Define‑XML generation
+The foundation for ADaM dataset creation
+The reference structure for regulatory review and inspection
+
+By enforcing standardized structure, naming, timing, and validation at this stage, SDTM enables reliable downstream analysis and consistent interpretation of clinical trial results.
 
 ### **Chapter 6: ARS (Analysis Results Standard)**
 - ARS v1.0 model  
