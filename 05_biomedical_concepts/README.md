@@ -1,8 +1,8 @@
 # TODO
-[] Select BCs relevant to LB, VS, EX
-[] Map BCs to SDTM variables
-[] Generate BC‑driven mapping rules
-[] Integrate BCs into metadata dictionary
+- [] Select BCs relevant to LB, VS, EX
+- [] Map BCs to SDTM variables
+- [] Generate BC‑driven mapping rules
+- [] Integrate BCs into metadata dictionary
 
 # Chapter 4 — Biomedical Concepts & Dataset Specializations
 *A metadata‑driven foundation for modern CDISC standards*
