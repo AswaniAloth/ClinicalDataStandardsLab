@@ -285,6 +285,10 @@ The reference structure for regulatory review and inspection
 
 By enforcing standardized structure, naming, timing, and validation at this stage, SDTM enables reliable downstream analysis and consistent interpretation of clinical trial results.
 
+### **Chapter 3:  ADaM (Analysis Data Model)
+The Analysis Data Model (ADaM) provides a standardized, analysis‑ready structure for clinical trial data derived from SDTM. ADaM datasets are designed to support statistical analysis, traceability, and regulatory review by ensuring that analysis results can be clearly understood and independently reproduced.
+In modern CDISC practice, ADaM is not merely a programming convention but a contract between statisticians, programmers, and regulators that defines how analysis results are calculated and interpreted.
+
 ### **Chapter 6: ARS (Analysis Results Standard)**
 - ARS v1.0 model  
 - ARM support  
