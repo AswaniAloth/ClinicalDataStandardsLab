@@ -1,5 +1,13 @@
 # TODO
 - [] Select BCs relevant to LB, VS, EX
+- Biomedical Concepts (BCs) represent the semantic intent of clinical data (what is measured or administered), independent of any SDTM structure.
+-1.1 BCs for Laboratory Tests (LB)
+Examples:
+-()Hemoglobin Measurement
+-Alanine Aminotransferase (ALT) Measurement
+Serum Creatinine Measurement
+
+These BCs describe quantitative laboratory assessments derived from biological specimens.
 - 
 - [] Map BCs to SDTM variables
 -This step connects semantic intent → SDTM structure.
