@@ -2,11 +2,25 @@
 - [] Select BCs relevant to LB, VS, EX
 - Biomedical Concepts (BCs) represent the semantic intent of clinical data (what is measured or administered), independent of any SDTM structure.
 -1.1 BCs for Laboratory Tests (LB)
-Examples:
+-Examples:
 -()Hemoglobin Measurement
 -Alanine Aminotransferase (ALT) Measurement
-Serum Creatinine Measurement
+-Serum Creatinine Measurement
 
+-1.2 BCs for Vital Signs (VS)
+-E-xamples:
+-Systolic Blood Pressure
+-Diastolic Blood Pressure
+-Heart Rate
+-Body Temperature
+
+-1.3 BCs for Exposure (EX)
+-Examples:
+-Investigational Product Administration
+-Concomitant Medication Exposure
+-These BCs represent interventions or substance administration, not measurements.
+
+These BCs represent physiological measurements typically collected repeatedly over time.
 These BCs describe quantitative laboratory assessments derived from biological specimens.
 - 
 - [] Map BCs to SDTM variables
