@@ -1,6 +1,21 @@
 # TODO
 - [] Select BCs relevant to LB, VS, EX
+- 
 - [] Map BCs to SDTM variables
+This step connects semantic intent → SDTM structure.
+One SDTM domain
+One parameter concept (--TESTCD / --TEST, PARAMCD / PARAM)
+
+Example: LB Mapping
+BC: Hemoglobin Measurement
+
+BC Element     SDTM Variable
+Analyte        LBTESTCD = HGB
+Test Name      LBTEST = Hemoglobin
+Result         LBORRES / LBSTRESN
+Unit           LBORRESU / LBSTRESU
+Specimen       LBSPEC = BLOOD
+
 - [] Generate BC‑driven mapping rules
 - [] Integrate BCs into metadata dictionary
 
