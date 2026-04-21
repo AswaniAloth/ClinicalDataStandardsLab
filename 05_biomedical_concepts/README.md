@@ -1,4 +1,4 @@
-# Chapter 4 — Biomedical Concepts & Dataset Specializations
+# Chapter 1 — Biomedical Concepts & Dataset Specializations
 *A metadata‑driven foundation for modern CDISC standards*
 
 Biomedical Concepts (BCs) and Dataset Specializations (DSpecs) represent the semantic layer of CDISC’s next‑generation metadata architecture.  
