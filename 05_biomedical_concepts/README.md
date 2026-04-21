@@ -104,8 +104,8 @@ Defines how the BC should appear when specialized into SDTM.
     "LBTEST": "Hemoglobin"
   }
 }
-
-This chapter focuses on:
+```
+### BC's focus on:
 
 - Defining **Biomedical Concepts (BCs)** using JSON metadata  
 - Creating **Dataset Specializations (DSpecs)** that translate BCs into SDTM‑ready structures  
