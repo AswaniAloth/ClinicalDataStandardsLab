@@ -1,4 +1,4 @@
-# Chapter 4 — Biomedical Concepts & Dataset Specializations
+# Chapter 1 — Biomedical Concepts & Dataset Specializations
 *A metadata‑driven foundation for modern CDISC standards*
 
 Biomedical Concepts (BCs) and Dataset Specializations (DSpecs) represent the semantic layer of CDISC’s next‑generation metadata architecture.  
@@ -8,7 +8,104 @@ This chapter establishes the conceptual backbone for the entire Clinical Data St
 
 ## 🎯 Purpose of This Chapter
 
-This chapter focuses on:
+# 🧬 Biomedical Concepts (BCs)
+
+## What Are Biomedical Concepts?
+
+A **Biomedical Concept (BC)** is a structured, machine‑readable definition of a clinical idea — such as *Hemoglobin*, *Systolic Blood Pressure*, or *Drug Administration*.  
+BCs describe the **semantic meaning** of clinical data before it is transformed into SDTM, ADaM, or any dataset structure.
+
+BCs answer the question:
+
+> **“What is this clinical concept, independent of how it is stored in a dataset?”**
+
+They form the semantic layer of CDISC’s next‑generation metadata architecture.
+
+---
+
+## Why BCs Exist
+
+Traditional SDTM mapping is variable‑driven and manual:
+
+- “Map LBORRES here”
+- “Set VSSTRESN there”
+- “LBTESTCD must equal HGB”
+
+This leads to inconsistent mappings and duplicated logic.
+
+BCs shift the focus from **variables → concepts**, enabling:
+
+- Rule‑based mapping  
+- Automation  
+- Consistency across studies  
+- Reusable metadata  
+
+---
+
+## What a BC Contains
+
+A Biomedical Concept typically includes:
+
+### 1. **Concept Name**
+The clinical idea being represented  
+(e.g., *Hemoglobin*, *Systolic Blood Pressure*).
+
+### 2. **Properties**
+Attributes that describe the concept:
+
+- Value  
+- Unit  
+- Specimen  
+- Method  
+- Timing  
+- Interpretation  
+
+### 3. **Data Types**
+Defines how each property behaves:
+
+- float  
+- integer  
+- string  
+- coded value  
+
+### 4. **Terminology Bindings**
+Links the concept to controlled terminology:
+
+- LBTESTCD = HGB  
+- LBTEST = Hemoglobin  
+- VSORRESU = mmHg  
+
+### 5. **Constraints**
+Rules that must be respected:
+
+- Specimen must be BLOOD  
+- Unit must be g/dL  
+- Method optional  
+
+### 6. **Expected Structure**
+Defines how the BC should appear when specialized into SDTM.
+
+---
+
+## Example: Hemoglobin (BC)
+
+```json
+{
+  "conceptId": "BC.Hemoglobin",
+  "name": "Hemoglobin",
+  "properties": [
+    {"name": "Value", "datatype": "float"},
+    {"name": "Unit", "datatype": "string"},
+    {"name": "Specimen", "datatype": "string"},
+    {"name": "Method", "datatype": "string"}
+  ],
+  "terminology": {
+    "LBTESTCD": "HGB",
+    "LBTEST": "Hemoglobin"
+  }
+}
+```
+### BC's focus on:
 
 - Defining **Biomedical Concepts (BCs)** using JSON metadata  
 - Creating **Dataset Specializations (DSpecs)** that translate BCs into SDTM‑ready structures  
