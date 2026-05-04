@@ -1,0 +1,12 @@
+CRF Annotation: Mandatory Rules and Best Practices
+Purpose
+This note defines the mandatory rules and best practices for Clinical Report Form (CRF) annotation. The objective is to ensure complete traceability, CDISC SDTM compliance, and regulatory readiness of clinical trial data from data collection through submission.
+CRF annotation serves as a key traceability document linking collected CRF data to SDTM datasets and must be prepared with a regulatory reviewer mindset.
+
+Scope
+This guidance applies to:
+SDTM Programmers
+Clinical Data Programmers
+Programming Leads and QC teams
+Studies intended for regulatory submission (FDA, EMA, PMDA, etc.)
+
