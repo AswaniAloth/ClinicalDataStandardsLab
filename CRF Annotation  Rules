@@ -202,8 +202,6 @@ Handling of unscheduled visits
 Logical consistency of visit assignments
 
 👉 EMA mindset:
-CRF annotation should support clear clinical storytelling, not just technical correctness.
-
 Global Submissions: One Annotation, Two Audiences
 Most modern studies target both FDA and EMA. The smartest approach is not to choose one—but to design CRF annotation to satisfy both.
 Practical Strategy
