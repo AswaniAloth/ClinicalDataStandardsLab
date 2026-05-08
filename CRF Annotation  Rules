@@ -328,4 +328,162 @@ For each domain (DM, AE, VS, EX, MH, LB, EG, etc.):
 Key Takeaway
 
 Annotated CRF → Mapping Spec → Raw Data Prep → SDTM Programming → QC → Submission Metadata  
+CRF → SDTM Mapping Rules (Technical Note)
+1. Purpose of Mapping Rules
 
+Mapping rules define how each CRF field is transformed into SDTM variables, including:
+
+    Source variable
+
+    Target SDTM variable
+
+    Domain
+
+    Controlled terminology
+
+    Derivation logic
+
+    Origin (CRF / Derived / Assigned)
+
+They ensure traceability from CRF → Raw → SDTM → Define‑XML.
+2. Core Components of a Mapping Rule
+
+Each mapping rule must include:
+
+    CRF Field: Label, question text, page number
+
+    Raw Variable: EDC variable name
+
+    SDTM Variable: e.g., AETERM, VSTESTCD
+
+    Domain: AE, VS, DM, LB, EX, etc.
+
+    Transformation Logic: recoding, unit conversion, concatenation
+
+    Derivation Logic: e.g., --DY, --SEQ, EPOCH
+
+    Controlled Terminology: CDISC CT or sponsor CT
+
+    Origin: CRF / Derived / Assigned
+
+    Comments: special cases, assumptions
+
+3. Types of Mapping Rules
+a. Direct Mapping
+
+CRF field → SDTM variable
+Example:
+
+    CRF: “Date of Birth”
+
+    SDTM: BRTHDTC = RAW.DOB
+
+b. Value Mapping
+
+CRF values → CDISC CT
+Example:
+
+    “Male/Female” → SEX = M/F
+
+    “Yes/No” → YN = Y/N
+
+c. Domain Assignment Rules
+
+Rules that determine which domain a CRF field belongs to.
+Example:
+
+    Vital signs → VS
+
+    Adverse events → AE
+
+    Concomitant meds → CM
+
+d. Derivation Rules
+
+Rules for computed variables:
+
+    --DTC (ISO date)
+
+    --DY (study day)
+
+    --SEQ (sequence number)
+
+    VISITNUM, EPOCH, --ELTM
+
+e. Conditional Rules
+
+Rules based on logic:
+
+    If AE ended before first dose → AEREL = NOT RELATED
+
+    If lab test is abnormal → populate LBSTAT
+
+4. Structure of a Mapping Rule (Standard Format)
+
+Example rule:
+Code
+
+CRF Field: Systolic Blood Pressure
+Raw Variable: VS_SBP
+SDTM Domain: VS
+SDTM Variable: VSTESTCD = SYSBP
+Mapping: VSORRES = VS_SBP
+Unit: VSORRESU = "mmHg"
+Derivation: VSDTC = ISO8601(VS_DATE)
+Origin: CRF
+Comments: Collected at Visit 1
+
+5. Cross-Domain Mapping Rules
+
+These rules ensure consistency across domains:
+
+    USUBJID must match DM
+
+    Dates must fall within RFSTDTC–RFENDTC
+
+    Visit structure must align across VS, LB, EG
+
+    Treatment rules must match EX and DM
+
+6. Mapping Rules for Common Domains
+AE (Adverse Events)
+
+    AETERM = raw.AE_TERM
+
+    AESTDTC = ISO(raw.AE_START)
+
+    AEENDTC = ISO(raw.AE_END)
+
+    AEREL = map(raw.AE_REL)
+
+    AESEQ = sequential per subject
+
+VS (Vital Signs)
+
+    VSTESTCD = SYSBP/DIABP/PULSE
+
+    VSORRES = raw value
+
+    VSORRESU = unit
+
+    VSDTC = ISO(raw date)
+
+DM (Demographics)
+
+    BRTHDTC = ISO(raw.DOB)
+
+    SEX = map(raw.SEX)
+
+    RACE = map(raw.RACE)
+
+7. Automation Potential
+
+Mapping rules can be automated using:
+
+    CRF → JSON metadata
+
+    Rule engines
+
+    AI/NLP for annotation extraction
+
+    Metadata-driven code generation (SAS/Python/R)
