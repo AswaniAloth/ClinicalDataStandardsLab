@@ -242,3 +242,90 @@ That’s the standard modern submissions demand.
 
 
 When there’s conflict, follow the stricter requirement.
+
+Workflow: From Annotated CRF → SDTM
+
+1. Annotated CRF Review
+
+    Identify each CRF field and its linked SDTM variable/domain.
+
+    Confirm annotations follow SDTM IG, CDASH, and sponsor standards.
+
+    Capture page numbers, field labels, codelists, and derivation notes.
+
+2. Build SDTM Mapping Specification
+
+    Extract metadata from aCRF into a structured spec.
+
+    For each SDTM variable define:
+
+        Source (raw variable or constant)
+
+        Transformation rules
+
+        Controlled terminology
+
+        Derivation logic
+
+        Origin (CRF / Derived / Assigned)
+
+3. Prepare Raw/EDC Data
+
+    Standardize raw datasets.
+
+    Clean structural issues (dates, missing keys, invalid values).
+
+    Harmonize subject identifiers and visit structure.
+
+    Pre-derive helper variables (e.g., RFSTDTC).
+
+4. Program SDTM Domains
+
+For each domain (DM, AE, VS, EX, MH, LB, EG, etc.):
+
+    Select relevant raw records.
+
+    Map CRF fields → SDTM variables.
+
+    Apply CDISC CT.
+
+    Derive timing variables (--DTC, --DY, --STDY, --ENDY).
+
+    Assign sequence numbers (--SEQ).
+
+    Create supplemental qualifiers (SUPP--) if needed.
+
+5. Cross-Domain Consistency Checks
+
+    USUBJID consistency across all domains.
+
+    Visit alignment across VS/LB/EG.
+
+    AE dates within study participation window.
+
+    EX aligned with treatment arm in DM.
+
+6. Validation & QC
+
+    Independent programming or reviewer QC.
+
+    Run compliance checks (e.g., Pinnacle 21).
+
+    Manual verification against aCRF and raw data.
+
+    Confirm derivations and CT mappings.
+
+7. Submission Package Linkage
+
+    Generate Define-XML from the same metadata.
+
+    Ensure traceability:
+
+        CRF field → SDTM variable → Define-XML.
+
+    Prepare SDRG to describe mapping decisions, deviations, and known issues.
+
+Key Takeaway
+
+Annotated CRF → Mapping Spec → Raw Data Prep → SDTM Programming → QC → Submission Metadata  
+
